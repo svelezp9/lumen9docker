@@ -13,11 +13,6 @@ class HomeController extends Controller
         "Llego a la disco vestido de Jordan - Bryan Castro Sosa",
     );
 
-    /*public function index()
-    {
-        return "Hi, I'm a Micro Framework";
-    }*/
-
     public function index()
     {
         $totalQuotes = (count(HomeController::$quotes));
@@ -26,3 +21,4 @@ class HomeController extends Controller
         return response()->json(['quote' => $randomQuote]);
     }
 }
+
