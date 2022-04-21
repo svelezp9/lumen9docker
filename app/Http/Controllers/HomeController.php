@@ -18,7 +18,7 @@ class HomeController extends Controller
         $totalQuotes = (count(HomeController::$quotes));
         $randomNumber = (rand(0,($totalQuotes-1)));
         $randomQuote = HomeController::$quotes[$randomNumber];
-        return response()->json(['quote' => $randomQuote]);
+        return response()->json(['quote' => $randomQuote, 'server_ip' => gethostbyname(gethostname())]);
     }
 }
 
