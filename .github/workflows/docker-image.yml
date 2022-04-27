@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASS
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag danielgara/lumen9randomquotes:latest
+      run: docker build . --file Dockerfile --tag svelezp9/lumen9randomquotes:latest
       
     - name: Docker Push
-      run: docker push danielgara/lumen9randomquotes
+      run: docker push svelezp9/lumen9randomquotes
